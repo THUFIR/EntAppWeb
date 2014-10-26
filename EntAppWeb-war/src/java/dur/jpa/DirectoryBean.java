@@ -1,4 +1,4 @@
-package dur.facelets;
+package dur.jpa;
 
 import java.io.Serializable;
 import javax.enterprise.context.ApplicationScoped;

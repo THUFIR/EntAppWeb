@@ -1,11 +1,11 @@
-package dur.facelets;
+package dur.jpa;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.inject.Named;
 import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
-//import javax.inject.Singleton;
+import javax.inject.Inject;
 
 @Named
 @ApplicationScoped
@@ -13,14 +13,16 @@ import javax.enterprise.context.ApplicationScoped;
 public class MyQueueBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private final Logger log = Logger.getLogger(MyQueueBean.class.getName());
-    private int next = 1001;
-
+    private static final Logger log = Logger.getLogger(MyQueueBean.class.getName());
+    private int next = 1003;
+    @Inject private ClientFacade clientFacade;
+    
     public MyQueueBean() {
     }
 
     public int getNext() {
-        log.info("next\t" + next);
+        Client client = clientFacade.find(next);
+        log.info(client.toString());
         return next++;
     }
 }
