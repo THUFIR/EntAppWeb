@@ -1,5 +1,6 @@
 package dur.jpa;
 
+
 import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.inject.Named;
