@@ -5,13 +5,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
-public class ClientFacade extends AbstractFacade<Client> implements ClientFacadeInterface {
+public class ClientFacade extends AbstractFacade<Client> implements ClientFacadeLocal {
     @PersistenceContext(unitName = "EntAppWeb-warPU")
     private EntityManager em;
 
-    
     @Override
-     protected EntityManager getEntityManager() {
+    protected EntityManager getEntityManager() {
         return em;
     }
 
