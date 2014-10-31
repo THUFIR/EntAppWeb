@@ -60,6 +60,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Client.findByVerifier", query = "SELECT c FROM Client c WHERE c.verifier = :verifier"),
     @NamedQuery(name = "Client.findByNotes", query = "SELECT c FROM Client c WHERE c.notes = :notes")})
 public class Client implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -540,7 +541,13 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "dur.jpa.Client[ id=" + id + " ]";
+        //return "dur.jpa.Client[ id=" + id + " ]";
+        String s = "\nname\t" + name
+                + "\nmake\t" + make
+                + "\nprice\t" + price
+                + "\nphone\t" + phone1;
+        return s;
+
     }
-    
+
 }
