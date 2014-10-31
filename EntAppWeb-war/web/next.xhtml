@@ -3,7 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+
     <h:head></h:head>
     <h:body>
         This and everything before will be ignored
@@ -13,7 +15,9 @@
             </ui:define>
             <ui:define name="main">
                 <h1>bird</h1>
-                next   #{next.next}
+                <p>
+                    next   #{nextClient.next}
+                </p>
             </ui:define>
         </ui:composition>
         This and everything after will be ignored
