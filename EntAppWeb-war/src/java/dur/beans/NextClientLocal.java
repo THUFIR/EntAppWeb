@@ -7,7 +7,7 @@ public interface NextClientLocal {
 
     String getNext();
 
-    void setGuess(int guess);
+    void setGuess(int guessInt);
 
     int getGuess();
 
