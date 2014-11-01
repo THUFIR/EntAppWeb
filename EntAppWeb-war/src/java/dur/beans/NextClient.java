@@ -34,8 +34,6 @@ public class NextClient implements NextClientLocal {
         return guess.intValue();
     }
 
-    //not sure what do with these methods
-    
     @Override
     public String getResponse() {
         return "the guess  of " + guess.intValue() + " is " + correct;
