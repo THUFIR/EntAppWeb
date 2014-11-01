@@ -26,21 +26,23 @@ public class NextClient implements NextClientLocal {
 
     @Override
     public void setGuess(int guessInt) {
-     guess = new AtomicInteger(guessInt);
-}
-
-@Override
-        public int getGuess() {
-        return guess.intValue();
+        guess = new AtomicInteger(guessInt);
     }
 
     @Override
-        public String getResponse() {
+    public int getGuess() {
+        return guess.intValue();
+    }
+
+    //not sure what do with these methods
+    
+    @Override
+    public String getResponse() {
         return "the guess  of " + guess.intValue() + " is " + correct;
     }
 
     @Override
-        public String submit() {
+    public String submit() {
         return "the guess  of " + guess.intValue() + " is " + correct;
     }
 
