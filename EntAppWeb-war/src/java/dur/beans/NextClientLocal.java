@@ -1,4 +1,3 @@
-
 package dur.beans;
 
 import javax.ejb.Local;
@@ -7,5 +6,12 @@ import javax.ejb.Local;
 public interface NextClientLocal {
 
     String getNext();
-    
+
+    void setGuess(int guess);
+
+    int getGuess();
+
+    String getResponse();
+
+    String submit();
 }

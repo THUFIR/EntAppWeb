@@ -14,9 +14,38 @@
                 <ui:include src="menu.xhtml"/>
             </ui:define>
             <ui:define name="main">
-                <h1>bird</h1>
+                <h1>next bird</h1>
                 <p>
-                    next   #{nextClient.next}
+                    #{nextClient.next}
+                </p>
+
+                <p>
+
+
+                    <h:panelGroup id="firstPanel">
+                        <h:form id="firstForm">
+                            <h:outputLabel for="input" value="First form input" />
+                            <h:inputText id="input" value="#{nextClient.guess}" required="true" />
+                            <h:commandButton value="Submit form" action="#{nextClient.submit}">
+                                <f:ajax execute="@form" render="@form :secondPanel :secondForm :messages" />
+                            </h:commandButton>
+                            <h:message for="input" />
+                        </h:form>
+                    </h:panelGroup>
+                    <h:panelGroup id="secondPanel">
+                        <h:form id="secondForm">
+                            <h:outputLabel for="input" value="Second form input" />
+                            <h:inputText id="input" value="#{nextClient.guess}" required="true" />
+                            <h:commandButton value="Submit other form" action="#{nextClient.submit}">
+                                <f:ajax execute="@form" render="@form :firstPanel :firstForm :messages" />
+                            </h:commandButton>
+                            <h:message for="input" />
+                        </h:form>
+                    </h:panelGroup>
+                    <h:messages id="messages" globalOnly="true" layout="table" />
+
+
+
                 </p>
             </ui:define>
         </ui:composition>
