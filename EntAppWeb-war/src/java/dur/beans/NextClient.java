@@ -35,17 +35,7 @@ public class NextClient implements NextClientLocal {
         return guess.intValue();
     }
 
-    @Override
-    public String getResponse() {
-        return "the guess  of " + guess.intValue() + " is " + correct;
-    }
-
-    @Override
-    public String submit() {
-        return "the guess  of " + guess.intValue() + " is " + correct;
-    }
-
-    @Override
+     @Override
     public Client getClient() {
         return client;
     }

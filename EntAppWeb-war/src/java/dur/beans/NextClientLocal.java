@@ -12,10 +12,6 @@ public interface NextClientLocal {
 
     int getGuess();
 
-    String getResponse();
-
-    String submit();
-
     Client getClient();
 
     void setClient(Client client);
