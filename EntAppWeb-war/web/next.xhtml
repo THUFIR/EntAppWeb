@@ -19,6 +19,21 @@
                     #{nextClient.next}
                 </p>
 
+
+                <p>
+                    <h:panelGroup id="simpleGroup">
+                        <h:form id="simpleForm">
+
+                            <h:outputLabel for="input" value="First form input" />
+                            <h:inputText id="input" value="#{nextClient.guess}" required="true" />
+                            <h:commandButton value="Submit form" action="#{nextClient.submit}">
+                            </h:commandButton>
+                        </h:form>
+                    </h:panelGroup>
+
+                </p>
+
+
                 <p>
 
 
