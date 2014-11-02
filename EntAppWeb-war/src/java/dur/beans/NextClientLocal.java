@@ -1,5 +1,6 @@
 package dur.beans;
 
+import dur.jpa.Client;
 import javax.ejb.Local;
 
 @Local
@@ -14,4 +15,8 @@ public interface NextClientLocal {
     String getResponse();
 
     String submit();
+
+    Client getClient();
+
+    void setClient(Client client);
 }

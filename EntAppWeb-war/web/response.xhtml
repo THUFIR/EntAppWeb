@@ -5,7 +5,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 
-    <h:head>next</h:head>
+    <h:head>response</h:head>
     <h:body>
         This and everything before will be ignored
         <ui:composition template="template.xhtml">
@@ -13,20 +13,13 @@
                 <ui:include src="menu.xhtml"/>
             </ui:define>
             <ui:define name="main">
-                <h1>next bird</h1>
+                <h1>submitted value</h1>
                 <p>
-                    #{nextClient.next}
+                    #{nextClient.guess}
                 </p>
+                <h2>for this bird</h2>
                 <p>
-                    <h:panelGroup id="simpleGroup">
-                        <h:form id="simpleForm">
-                            <h:outputLabel for="input" value="First form input" />
-                            <h:inputText id="input" value="#{nextClient.guess}" required="true" />
-                            <h:commandButton value="submit" action="response">
-                            </h:commandButton>
-                        </h:form>
-                    </h:panelGroup>
-
+                    #{nextClient.client}
                 </p>
             </ui:define>
         </ui:composition>

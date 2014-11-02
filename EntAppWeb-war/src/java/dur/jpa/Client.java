@@ -542,7 +542,8 @@ public class Client implements Serializable {
     @Override
     public String toString() {
         //return "dur.jpa.Client[ id=" + id + " ]";
-        String s = "\nname\t" + name
+        String s = "\nid\t" + id
+                + "\nname\t" + name
                 + "\nmake\t" + make
                 + "\nprice\t" + price
                 + "\nphone\t" + phone1;

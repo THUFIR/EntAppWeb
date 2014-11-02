@@ -16,11 +16,12 @@ public class NextClient implements NextClientLocal {
     private AtomicInteger next = new AtomicInteger(1009);
     private AtomicInteger guess = new AtomicInteger(0);
     private final boolean correct = true;
+    private Client client = new Client();
 
     @Override
     public String getNext() {
         next.addAndGet(1);
-        Client client = clientFacade.find(next.intValue());
+        client = clientFacade.find(next.intValue());
         return client.toString();
     }
 
@@ -42,6 +43,16 @@ public class NextClient implements NextClientLocal {
     @Override
     public String submit() {
         return "the guess  of " + guess.intValue() + " is " + correct;
+    }
+
+    @Override
+    public Client getClient() {
+        return client;
+    }
+
+    @Override
+    public void setClient(Client client) {
+        this.client = client;
     }
 
 }
