@@ -1,11 +1,13 @@
-package dur.jpa;
+package bounceme.net.dur.jpa.facades;
 
+import dur.beans.FeedFacadeRemote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import net.bounceme.dur.jpa.entities.Feed;
 
 @Stateless
-public class ClientFacade extends AbstractFacade<Client> implements ClientFacadeLocal {
+public class FeedFacade extends AbstractFacade<Feed> implements FeedFacadeLocal, FeedFacadeRemote {
     @PersistenceContext(unitName = "EntAppWeb-warPU")
     private EntityManager em;
 
@@ -14,8 +16,8 @@ public class ClientFacade extends AbstractFacade<Client> implements ClientFacade
         return em;
     }
 
-    public ClientFacade() {
-        super(Client.class);
+    public FeedFacade() {
+        super(Feed.class);
     }
     
 }

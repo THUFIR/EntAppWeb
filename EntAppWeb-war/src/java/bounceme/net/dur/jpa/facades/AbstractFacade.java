@@ -1,4 +1,4 @@
-package dur.jpa;
+package bounceme.net.dur.jpa.facades;
 
 import java.util.List;
 import javax.persistence.EntityManager;

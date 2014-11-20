@@ -1,4 +1,4 @@
-package dur.beans;
+package bounceme.net.durdur.beans;
 
 import dur.jpa.Client;
 import dur.jpa.ClientFacadeLocal;
